@@ -24,8 +24,8 @@ function boot() {
         ['[  OK  ] Mounting /dining', 'ok'],
         ['[  OK  ] Mounting /parking', 'ok'],
         ['[  OK  ] Mounting /study-rooms', 'ok'],
-        ['[  OK  ] Loading tracks: ai-club, ieee-cyber, nudox-games', 'ok'],
-        ['[  OK  ] Stocking free food (5 days)', 'ok'],
+        ['[  OK  ] Loading tracks: ai-club, ieee-cyber, nudox-games, track-04', 'ok'],
+        ['[  OK  ] Stocking free food (opening + closing day)', 'ok'],
         ['[ WAIT ] Waiting for builders...', 'hl'],
         ['', ''],
         ['> launch hackathon-2026', 'hl'],
@@ -133,7 +133,7 @@ function renderTracks() {
         <article class="win track reveal" style="--delay:${i * 0.08}s">
             <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="win-title">track_0${i + 1} // ${esc(t.id)}</span></div>
             <div class="win-body">
-                <span class="track-host">hosted by ${esc(t.host)}</span>
+                <span class="track-host">hosted by ${show(t.host)}</span>
                 <h3>${esc(t.name)}</h3>
                 <p>${esc(t.blurb)}</p>
                 <div class="track-prize">Prize <strong>${show(t.prize)}</strong></div>
@@ -176,6 +176,17 @@ function renderSchedule() {
         .join('');
 }
 
+function renderGuests() {
+    const el = $('#guests-list');
+    if (!el || !HACKATHON.guests) return;
+    el.innerHTML = HACKATHON.guests
+        .map(
+            (g, i) =>
+                `<div class="module reveal" style="--delay:${i * 0.06}s"><span class="module-type">industry</span><strong>${esc(g.name)}</strong><span>${esc(g.note || 'Coming to the hackathon')}</span></div>`
+        )
+        .join('');
+}
+
 function renderPartners() {
     const el = $('#partners-list');
     if (!el) return;
@@ -212,6 +223,7 @@ renderStats();
 renderTracks();
 renderSchedule();
 renderPartners();
+renderGuests();
 reveal();
 clock();
 countdown();
