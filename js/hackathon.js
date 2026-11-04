@@ -187,7 +187,7 @@ function renderPartners() {
     el.innerHTML = [
         ...HACKATHON.partners.map((p) => card('partner', p.name, p.role, p.url)),
         ...HACKATHON.sponsors.map((s) => card('sponsor', s.name, s.tier || 'Sponsor', s.url)),
-        `<a class="module module-open reveal" href="/sponsors"><span class="module-type">slot open</span><strong>Your company</strong><span>Become a sponsor &rarr;</span></a>`,
+        `<a class="module module-open reveal" href="sponsors"><span class="module-type">slot open</span><strong>Your company</strong><span>Become a sponsor &rarr;</span></a>`,
     ].join('');
 }
 

@@ -384,7 +384,7 @@ p {
     position: absolute;
     inset: -4%;
     z-index: -3;
-    background: url('/assets/hero-background.gif') center / cover no-repeat;
+    background: url('../assets/hero-background.gif') center / cover no-repeat;
     filter: brightness(0.34) saturate(1.35) hue-rotate(-14deg) blur(3px);
     transform: scale(1.04);
 }

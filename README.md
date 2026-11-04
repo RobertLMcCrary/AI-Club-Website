@@ -48,7 +48,12 @@ Resize photos before you add them. Around 1800px on the long edge is plenty. On 
 sips -Z 1800 -s formatOptions 80 assets/new-photo.jpg
 ```
 
-## Deploying on Vercel
+## Deploying
 
-Set the project's Root Directory to the repo root (clear it if it says `ai-club-site`), set the
-Framework Preset to **Other**, and leave the build command empty.
+**GitHub Pages:** in the repo go to Settings → Pages → Build and deployment, choose
+"Deploy from a branch", branch `main`, folder `/ (root)`. Every push to `main` redeploys.
+All paths in the site are relative, so it works at `<user>.github.io/KSU-AI-Club-Site/` and on
+a custom domain. `.nojekyll` tells GitHub to serve the files as-is.
+
+**Vercel (alternative):** Root Directory = repo root, Framework Preset = Other, no build
+command. `vercel.json` adds clean URLs and redirects old `/blog` links.
