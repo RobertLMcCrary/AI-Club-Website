@@ -8,7 +8,7 @@ export const HACKATHON = {
     // Countdown target (Eastern time; Nov 2026 is EST, -05:00).
     kickoff: '2026-11-16T19:30:00-05:00',
     // When the event is over (the countdown switches to "ended" after this).
-    end: '2026-11-20T21:30:00-05:00',
+    end: '2026-11-20T20:30:00-05:00',
 
     prizePool: '$4,000',
 
@@ -50,7 +50,7 @@ export const HACKATHON = {
         { date: '2026-11-17', label: 'Build day', items: [{ time: '7:30–9:30 pm', title: 'Hacking', room: 'ETC Q 104' }] },
         { date: '2026-11-18', label: 'Judge help day', items: [{ time: '7:30–9:30 pm', title: 'Hacking + judges on hand to help you', room: 'ETC Q 104' }] },
         { date: '2026-11-19', label: 'Build day', items: [{ time: '7:30–9:30 pm', title: 'Hacking', room: 'ETC Q 104' }] },
-        { date: '2026-11-20', label: 'Demo day', items: [{ time: '7:30–9:30 pm', title: 'Demos, judging, awards + free food', room: 'ETC Q 104' }] },
+        { date: '2026-11-20', label: 'Demo day', items: [{ time: '5:30–8:30 pm', title: 'Demos, judging, awards + free food', room: 'ETC Q 104' }] },
     ],
 
     // Organizations running the event with us.
