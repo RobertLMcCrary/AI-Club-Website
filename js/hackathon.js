@@ -24,7 +24,7 @@ function boot() {
         ['[  OK  ] Mounting /dining', 'ok'],
         ['[  OK  ] Mounting /parking', 'ok'],
         ['[  OK  ] Mounting /study-rooms', 'ok'],
-        ['[  OK  ] Loading tracks: ai-club, ieee-cyber, nudox-games, track-04', 'ok'],
+        ['[  OK  ] Loading tracks: ai-club, ieee-game-sprint, nudox-games, itcan-do', 'ok'],
         ['[  OK  ] Stocking free food (opening + closing day)', 'ok'],
         ['[ WAIT ] Waiting for builders...', 'hl'],
         ['', ''],
@@ -190,13 +190,14 @@ function renderGuests() {
 function renderPartners() {
     const el = $('#partners-list');
     if (!el) return;
-    const card = (type, name, sub, url) => {
+    const card = (type, name, sub, url, logo) => {
         const tag = url ? 'a' : 'div';
         const attrs = url ? ` href="${esc(url)}" target="_blank" rel="noopener"` : '';
-        return `<${tag} class="module reveal"${attrs}><span class="module-type">${type}</span><strong>${esc(name)}</strong><span>${esc(sub)}</span></${tag}>`;
+        const img = logo ? `<img class="module-logo" src="${esc(logo)}" alt="">` : '';
+        return `<${tag} class="module reveal"${attrs}>${img}<span class="module-type">${type}</span><strong>${esc(name)}</strong><span>${esc(sub)}</span></${tag}>`;
     };
     el.innerHTML = [
-        ...HACKATHON.partners.map((p) => card('partner', p.name, p.role, p.url)),
+        ...HACKATHON.partners.map((p) => card('partner', p.name, p.role, p.url, p.logo)),
         ...HACKATHON.sponsors.map((s) => card('sponsor', s.name, s.tier || 'Sponsor', s.url)),
         `<a class="module module-open reveal" href="sponsors"><span class="module-type">slot open</span><strong>Your company</strong><span>Become a sponsor &rarr;</span></a>`,
     ].join('');

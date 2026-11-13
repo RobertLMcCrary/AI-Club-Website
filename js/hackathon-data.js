@@ -6,10 +6,9 @@
 
 export const HACKATHON = {
     // Countdown target (Eastern time; Nov 2026 is EST, -05:00).
-    // Set this to the real kickoff time once it's decided.
-    kickoff: '2026-11-16T00:00:00-05:00',
+    kickoff: '2026-11-16T19:30:00-05:00',
     // When the event is over (the countdown switches to "ended" after this).
-    end: '2026-11-21T00:00:00-05:00',
+    end: '2026-11-20T21:30:00-05:00',
 
     prizePool: '$4,000',
 
@@ -22,10 +21,10 @@ export const HACKATHON = {
             prize: '$1,500',
         },
         {
-            id: 'ieee-cyber',
-            name: 'Cybersecurity track',
-            host: 'IEEE',
-            blurb: 'Security-focused projects, run with IEEE.',
+            id: 'ieee-game-sprint',
+            name: 'AI Game Sprint',
+            host: 'IEEE Computer Society at KSU',
+            blurb: 'Build a game with AI. The AI can be part of the game, or you can use AI to build it. Use any tools, platform, or hardware you have. Earn bonus points by using the ELEGOO Mega 2560 kit however you want (a controller, the display, LEDs, anything in the kit). Kits are available from day one and can go home with a signed borrowing form. First place wins $500, second place wins $300, and third place wins $200.',
             prize: '$1,000',
         },
         {
@@ -36,35 +35,48 @@ export const HACKATHON = {
             prize: '$700',
         },
         {
-            id: 'track-04',
-            name: 'Fourth track',
-            host: 'TBA',
-            blurb: 'One more track is on the way. Details announced soon.',
-            prize: '$500+',
+            id: 'itcan-do',
+            name: 'itcan.do track',
+            host: 'itcan.do',
+            blurb: 'Build something you and your AI agent use together. With itcan.do, your agent builds the page your idea needs and puts it on any screen, and every tap on it goes back to the agent. Bring a laptop with Claude Code set up. We recommend it, though other AI agents such as Codex work too.',
+            prize: '$500',
         },
     ],
 
     // One entry per day. Add items as times and rooms are confirmed:
     //   { time: '6:30 pm', title: 'Opening ceremony', room: 'Q202' }
     schedule: [
-        { date: '2026-11-16', label: 'Opening day', items: [{ time: 'TBA', title: 'Kickoff + free food', room: 'TBA' }] },
-        { date: '2026-11-17', label: 'Build day', items: [{ time: 'TBA', title: 'Hacking', room: 'TBA' }] },
-        { date: '2026-11-18', label: 'Judge help day', items: [{ time: 'TBA', title: 'Hacking + judges on hand to help you', room: 'TBA' }] },
-        { date: '2026-11-19', label: 'Build day', items: [{ time: 'TBA', title: 'Hacking', room: 'TBA' }] },
-        { date: '2026-11-20', label: 'Demo day', items: [{ time: 'TBA', title: 'Demos, judging, awards + free food', room: 'TBA' }] },
+        { date: '2026-11-16', label: 'Opening day', items: [{ time: '7:30–9:30 pm', title: 'Kickoff + free food', room: 'ETC Q 104' }] },
+        { date: '2026-11-17', label: 'Build day', items: [{ time: '7:30–9:30 pm', title: 'Hacking', room: 'ETC Q 104' }] },
+        { date: '2026-11-18', label: 'Judge help day', items: [{ time: '7:30–9:30 pm', title: 'Hacking + judges on hand to help you', room: 'ETC Q 104' }] },
+        { date: '2026-11-19', label: 'Build day', items: [{ time: '7:30–9:30 pm', title: 'Hacking', room: 'ETC Q 104' }] },
+        { date: '2026-11-20', label: 'Demo day', items: [{ time: '7:30–9:30 pm', title: 'Demos, judging, awards + free food', room: 'ETC Q 104' }] },
     ],
 
     // Organizations running the event with us.
     partners: [
         { name: 'KSU AI Club', role: 'Host' },
-        { name: 'IEEE', role: 'Cybersecurity track' },
+        { name: 'CCSE', role: 'College partner' },
+        {
+            name: 'IEEE Computer Society at KSU',
+            role: 'AI Game Sprint',
+            url: 'https://www.linkedin.com/company/ieee-kennesaw-state-university/',
+        },
+        { name: 'IEEE ComSoc', role: 'Track partner' },
+        { name: 'SWE at KSU', role: 'Track partner' },
         { name: 'Nudox', role: 'Game track' },
+        {
+            name: 'itcan.do',
+            role: 'itcan.do track',
+            url: 'https://itcan.do',
+            logo: 'assets/it-assets/itcando-wordmark-on-dark.svg',
+        },
     ],
 
     // Companies whose people are coming to the event.
     guests: [
-        { name: 'Amazon' },
         { name: 'Google' },
+        { name: 'Amazon' },
         { name: 'Microsoft' },
         { name: 'Uber' },
     ],
