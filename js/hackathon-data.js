@@ -47,9 +47,6 @@ export const HACKATHON = {
     //   { time: '6:30 pm', title: 'Opening ceremony', room: 'Q202' }
     schedule: [
         { date: '2026-11-16', label: 'Opening day', items: [{ time: '7:30–9:30 pm', title: 'Kickoff + free food', room: 'ETC Q 104' }] },
-        { date: '2026-11-17', label: 'Build day', items: [{ time: '7:30–9:30 pm', title: 'Hacking', room: 'ETC Q 104' }] },
-        { date: '2026-11-18', label: 'Judge help day', items: [{ time: '7:30–9:30 pm', title: 'Hacking + judges on hand to help you', room: 'ETC Q 104' }] },
-        { date: '2026-11-19', label: 'Build day', items: [{ time: '7:30–9:30 pm', title: 'Hacking', room: 'ETC Q 104' }] },
         { date: '2026-11-20', label: 'Demo day', items: [{ time: '5:30–8:30 pm', title: 'Demos, judging, awards + free food', room: 'ETC Q 104' }] },
     ],
 
